@@ -1,0 +1,82 @@
+:root {
+  --green-900: #1A3A2A;
+  --green-800: #2D5A3D;
+  --green-700: #3A7A52;
+  --green-600: #4A9E6B;
+  --green-500: #5CB87A;
+  --green-400: #7ED09A;
+  --green-300: #A8E4BC;
+  --green-200: #D0F0DB;
+  --green-100: #EBF8EF;
+  --green-50: #F5FBF7;
+
+  --sand-100: #FAF8F5;
+  --sand-200: #F0EDE8;
+  --sand-300: #E0DBD3;
+
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6B6B;
+  --text-muted: #9B9B9B;
+
+  --red: #E74C3C;
+  --yellow: #F39C12;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+
+  --nav-height: 72px;
+  --header-height: 56px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--sand-100);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+}
+
+#root {
+  min-height: 100dvh;
+  padding-bottom: var(--nav-height);
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
