@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getPlant, addPlant, updatePlant } from '../store';
+import AppHeader from '../components/AppHeader';
 
 export default function AddEditPlant() {
   const { id } = useParams<{ id: string }>();
@@ -62,11 +63,11 @@ export default function AddEditPlant() {
 
   return (
     <div className="page">
-      <div className="header">
-        <button className="header-back" onClick={() => navigate(-1)}>←</button>
-        <h1>{isEdit ? 'Edit Plant' : 'New Plant'}</h1>
-        <button className="header-action" onClick={handleSubmit}>Save</button>
-      </div>
+      <AppHeader
+        pageTitle={isEdit ? 'Edit Plant' : 'New Plant'}
+        backButton={() => navigate(-1)}
+        rightAction={{ label: 'Save', onClick: handleSubmit }}
+      />
 
       <div className="form-group">
         <label className="form-label">Plant Name *</label>

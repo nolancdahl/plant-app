@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { loadPlants, getDaysUntilCare, getUrgencyColor } from '../store';
+import AppHeader from '../components/AppHeader';
 
 export default function Plants() {
   const navigate = useNavigate();
@@ -7,9 +8,7 @@ export default function Plants() {
 
   return (
     <div className="page">
-      <div className="header">
-        <h1>Plants</h1>
-      </div>
+      <AppHeader pageTitle="Plants" />
 
       {plants.length === 0 ? (
         <div className="empty-state">

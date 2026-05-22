@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { loadPlants, getDaysUntilCare, getUrgencyColor } from '../store';
 import type { Plant, CareType } from '../types';
+import AppHeader from '../components/AppHeader';
 
 interface CareItem {
   plant: Plant;
@@ -40,12 +41,9 @@ export default function Dashboard() {
 
   return (
     <div className="page">
-      <div className="header">
-        <h1>Verdant</h1>
-      </div>
+      <AppHeader pageTitle="Home" />
 
       <div className="dashboard-greeting">
-        <h1>Your Garden</h1>
         <p>
           {plants.length === 0
             ? 'Add your first plant to get started'

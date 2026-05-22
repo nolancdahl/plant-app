@@ -1,37 +1,52 @@
 :root {
-  --green-900: #1A3A2A;
-  --green-800: #2D5A3D;
-  --green-700: #3A7A52;
-  --green-600: #4A9E6B;
-  --green-500: #5CB87A;
-  --green-400: #7ED09A;
-  --green-300: #A8E4BC;
-  --green-200: #D0F0DB;
-  --green-100: #EBF8EF;
-  --green-50: #F5FBF7;
+  /* Basil Green */
+  --green-900: #1B3D2A;
+  --green-800: #2A5E3F;
+  --green-700: #3A7D55;
+  --green-600: #4E9E6D;
+  --green-500: #5FB87E;
+  --green-400: #7ACF98;
+  --green-300: #A0DFB5;
+  --green-200: #C5EDD5;
+  --green-100: #1E3A2B;
+  --green-50: #1A2E24;
 
-  --sand-100: #FAF8F5;
-  --sand-200: #F0EDE8;
-  --sand-300: #E0DBD3;
+  /* Lemon Yellow */
+  --lemon-500: #F2D024;
+  --lemon-400: #F5DA4A;
+  --lemon-300: #F8E474;
+  --lemon-200: #FBF0A8;
+  --lemon-100: #2A2710;
 
-  --text-primary: #1A1A1A;
-  --text-secondary: #6B6B6B;
-  --text-muted: #9B9B9B;
+  /* Dark backgrounds */
+  --bg-primary: #1A1A1E;
+  --bg-secondary: #222226;
+  --bg-card: #2A2A2F;
+  --bg-elevated: #32323A;
 
+  --border-color: #3A3A42;
+  --border-subtle: #2E2E35;
+
+  /* Text */
+  --text-primary: #E8E8EC;
+  --text-secondary: #A0A0A8;
+  --text-muted: #6A6A72;
+
+  /* Accent colors */
   --red: #E74C3C;
-  --yellow: #F39C12;
+  --yellow: #F2D024;
 
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 20px;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.4);
 
-  --nav-height: 72px;
-  --header-height: 56px;
+  --nav-height: 56px;
+  --header-height: 88px;
 }
 
 * {
@@ -42,7 +57,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--sand-100);
+  background: var(--bg-primary);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,6 +67,7 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
+  color: var(--text-primary);
 }
 
 #root {
@@ -64,11 +80,13 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  color: var(--text-primary);
 }
 
 input, textarea, select {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
+  color: var(--text-primary);
 }
 
 a {

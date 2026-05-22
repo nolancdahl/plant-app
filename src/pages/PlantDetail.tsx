@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getPlant, getDaysUntilCare, getUrgencyColor, logCare, addPhoto, deletePlant } from '../store';
+import AppHeader from '../components/AppHeader';
 
 export default function PlantDetail() {
   const { id } = useParams<{ id: string }>();
@@ -15,10 +16,7 @@ export default function PlantDetail() {
   if (!plant) {
     return (
       <div className="page">
-        <div className="header">
-          <button className="header-back" onClick={() => navigate(-1)}>←</button>
-          <h1>Not Found</h1>
-        </div>
+        <AppHeader pageTitle="Not Found" backButton={() => navigate(-1)} />
         <div className="empty-state">
           <h2>Plant not found</h2>
           <button className="btn btn-primary" onClick={() => navigate('/plants')}>Go to Plants</button>
@@ -84,10 +82,10 @@ export default function PlantDetail() {
 
   return (
     <div className="page" style={{ padding: 0 }}>
-      <div className="header" style={{ background: 'transparent', borderBottom: 'none' }}>
-        <button className="header-back" onClick={() => navigate(-1)} style={{ color: plant.photos.length > 0 ? 'white' : undefined }}>←</button>
-        <button className="header-action" onClick={() => navigate(`/plants/${plant.id}/edit`)} style={{ color: plant.photos.length > 0 ? 'white' : undefined }}>Edit</button>
-      </div>
+      <AppHeader
+        backButton={() => navigate(-1)}
+        rightAction={{ label: 'Edit', onClick: () => navigate(`/plants/${plant.id}/edit`) }}
+      />
 
       <div className="detail-hero">
         {plant.photos.length > 0 ? (

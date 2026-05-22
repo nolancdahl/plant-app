@@ -52,7 +52,6 @@ export default function BottomNav() {
           onClick={() => navigate(tab.path)}
         >
           {tab.icon}
-          {tab.label}
         </button>
       ))}
     </nav>

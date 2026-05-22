@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/leaf.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#2D5A3D" />
-    <title>Verdant - Plant Care</title>
+    <meta name="theme-color" content="#1A1A1E" />
+    <title>Green</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -13,5 +13,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- homebase launcher: top-left button + side panel listing all sibling apps.
+         Source: Assistant App\public\launcher.js -->
+    <script>
+      (function () {
+        var isLocal = /^(localhost|127\.0\.0\.1|192\.|10\.)/.test(location.hostname)
+        var origin = isLocal ? 'http://localhost:5290' : 'https://homebase-nolan.netlify.app'
+        var s = document.createElement('script')
+        s.src = origin + '/launcher.js'
+        s.defer = true
+        s.dataset.appKey = 'plants'
+        document.body.appendChild(s)
+      })()
+    </script>
   </body>
 </html>

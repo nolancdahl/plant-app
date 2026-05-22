@@ -1,4 +1,5 @@
 import { loadPlants, getDaysUntilCare } from '../store';
+import AppHeader from '../components/AppHeader';
 
 export default function Profile() {
   const plants = loadPlants();
@@ -13,9 +14,7 @@ export default function Profile() {
 
   return (
     <div className="page">
-      <div className="header">
-        <h1>Profile</h1>
-      </div>
+      <AppHeader pageTitle="Profile" />
 
       <div className="profile-header">
         <div className="profile-avatar">🌿</div>
@@ -51,7 +50,7 @@ export default function Profile() {
       <div className="card" style={{ marginBottom: '16px' }}>
         <h2 style={{ fontSize: '16px', marginBottom: '12px' }}>About</h2>
         <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-          Verdant helps you track your plants' care schedules, monitor their health, and document their growth through photos.
+          Mano Verde helps you track your plants' care schedules, monitor their health, and document their growth through photos.
         </p>
       </div>
 
@@ -63,7 +62,7 @@ export default function Profile() {
             try {
               const used = new Blob([localStorage.getItem('verdant_plants') || '']).size;
               const mb = (used / 1024 / 1024).toFixed(2);
-              return ` Currently using ${mb} MB.`;
+              return ` Using ${mb} MB.`;
             } catch {
               return '';
             }
