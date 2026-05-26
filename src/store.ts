@@ -100,6 +100,6 @@ export function getDaysUntilCare(plant: Plant, type: 'water' | 'fertilize' | 'so
 
 export function getUrgencyColor(days: number): string {
   if (days <= 2) return '#E74C3C';
-  if (days <= 4) return '#F2D024';
-  return '#5FB87E';
+  if (days <= 4) return '#F5DA4A';
+  return '#7ACF98';
 }

@@ -1,5 +1,5 @@
 :root {
-  /* Basil Green */
+  /* Greens — keep the existing colorway */
   --green-900: #1B3D2A;
   --green-800: #2A5E3F;
   --green-700: #3A7D55;
@@ -11,12 +11,10 @@
   --green-100: #1E3A2B;
   --green-50: #1A2E24;
 
-  /* Lemon Yellow */
+  /* Lemon */
   --lemon-500: #F2D024;
   --lemon-400: #F5DA4A;
   --lemon-300: #F8E474;
-  --lemon-200: #FBF0A8;
-  --lemon-100: #2A2710;
 
   /* Dark backgrounds */
   --bg-primary: #1A1A1E;
@@ -26,37 +24,30 @@
 
   --border-color: #3A3A42;
   --border-subtle: #2E2E35;
+  --line: rgba(122, 207, 152, 0.12);
+  --line-soft: rgba(122, 207, 152, 0.06);
 
   /* Text */
   --text-primary: #E8E8EC;
   --text-secondary: #A0A0A8;
   --text-muted: #6A6A72;
+  --text-faint: #50505A;
 
-  /* Accent colors */
+  /* Accents */
   --red: #E74C3C;
-  --yellow: #F2D024;
+  --danger-soft: rgba(231, 76, 60, 0.15);
 
-  --radius-sm: 8px;
+  --radius-sm: 6px;
   --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-lg: 14px;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.4);
-
-  --nav-height: 56px;
-  --header-height: 88px;
+  --nav-height: 62px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
@@ -64,37 +55,16 @@ body {
   min-height: 100dvh;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
 #root {
   min-height: 100dvh;
   padding-bottom: var(--nav-height);
 }
 
-button {
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: var(--text-primary);
-}
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: var(--text-primary); }
+input, textarea, select { font-family: inherit; font-size: 16px; color: var(--text-primary); }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
 
-input, textarea, select {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  color: var(--text-primary);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(122, 207, 152, 0.14); border-radius: 3px; }

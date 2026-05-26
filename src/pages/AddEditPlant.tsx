@@ -110,7 +110,7 @@ export default function AddEditPlant() {
         </div>
       </div>
 
-      <h2 style={{ fontSize: '16px', margin: '20px 0 12px' }}>Growing Conditions</h2>
+      <h2 className="section-title" style={{ margin: '24px 0 12px' }}>Growing Conditions</h2>
 
       <div className="form-group">
         <label className="form-label">Sunlight</label>
@@ -145,7 +145,7 @@ export default function AddEditPlant() {
         </div>
       </div>
 
-      <h2 style={{ fontSize: '16px', margin: '20px 0 12px' }}>Care Schedule</h2>
+      <h2 className="section-title" style={{ margin: '24px 0 12px' }}>Care Schedule</h2>
 
       <div className="form-group">
         <label className="form-label">Water Every (days)</label>
@@ -181,7 +181,7 @@ export default function AddEditPlant() {
         </div>
       </div>
 
-      <h2 style={{ fontSize: '16px', margin: '20px 0 12px' }}>Notes</h2>
+      <h2 className="section-title" style={{ margin: '24px 0 12px' }}>Notes</h2>
 
       <div className="form-group">
         <label className="form-label">Health Notes</label>

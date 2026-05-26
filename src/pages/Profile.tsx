@@ -14,12 +14,12 @@ export default function Profile() {
 
   return (
     <div className="page">
-      <AppHeader pageTitle="Profile" />
+      <AppHeader />
 
       <div className="profile-header">
         <div className="profile-avatar">🌿</div>
-        <h1 style={{ fontSize: '24px' }}>Plant Parent</h1>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '14px', marginTop: '4px' }}>
+        <h1 className="title-bold" style={{ fontSize: '24px' }}>Plant Parent</h1>
+        <p className="page-subtitle" style={{ marginTop: '4px' }}>
           Keeping your garden green
         </p>
       </div>
@@ -40,23 +40,23 @@ export default function Profile() {
       </div>
 
       {needsAttention > 0 && (
-        <div className="card" style={{ marginBottom: '16px', textAlign: 'center' }}>
-          <p style={{ fontSize: '14px', color: 'var(--text-secondary)' }}>
+        <div className="tile" style={{ padding: '16px', marginBottom: '16px', textAlign: 'center' }}>
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: 'var(--text-secondary)' }}>
             <strong style={{ color: 'var(--red)' }}>{needsAttention}</strong> plant{needsAttention !== 1 ? 's' : ''} need attention soon
           </p>
         </div>
       )}
 
-      <div className="card" style={{ marginBottom: '16px' }}>
-        <h2 style={{ fontSize: '16px', marginBottom: '12px' }}>About</h2>
-        <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+      <h2 className="section-title">About</h2>
+      <div className="tile" style={{ padding: '16px', marginBottom: '16px' }}>
+        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
           Mano Verde helps you track your plants' care schedules, monitor their health, and document their growth through photos.
         </p>
       </div>
 
-      <div className="card">
-        <h2 style={{ fontSize: '16px', marginBottom: '12px' }}>Storage</h2>
-        <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+      <h2 className="section-title">Storage</h2>
+      <div className="tile" style={{ padding: '16px' }}>
+        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
           Data is stored locally on this device. Photos are compressed to save space.
           {(() => {
             try {

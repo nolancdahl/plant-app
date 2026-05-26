@@ -6,7 +6,7 @@ interface AppHeaderProps {
 
 export default function AppHeader({ pageTitle, backButton, rightAction }: AppHeaderProps) {
   return (
-    <div className="app-header">
+    <header className="app-header">
       <div className="app-header-brand">
         {backButton && (
           <button className="header-back" onClick={backButton}>
@@ -34,9 +34,12 @@ export default function AppHeader({ pageTitle, backButton, rightAction }: AppHea
           </button>
         )}
       </div>
-      {pageTitle && (
-        <div className="app-header-page-title">{pageTitle}</div>
-      )}
-    </div>
+      {/* Smooth arch — same pattern as Mint's ellipse */}
+      <div className="app-header-arch">
+        <svg viewBox="0 0 100 56" preserveAspectRatio="none">
+          <ellipse cx="50" cy="56" rx="56" ry="56" fill="var(--bg-primary)" />
+        </svg>
+      </div>
+    </header>
   );
 }

@@ -272,8 +272,8 @@ export default function PlantDetail() {
           <div className="action-sheet-backdrop" onClick={() => setShowDeleteConfirm(false)} />
           <div className="action-sheet-content">
             <div className="action-sheet-handle" />
-            <h2 style={{ textAlign: 'center', marginBottom: '8px' }}>Delete {plant.name}?</h2>
-            <p style={{ textAlign: 'center', fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '20px' }}>
+            <h2 className="title-bold" style={{ textAlign: 'center', marginBottom: '8px', fontSize: '20px' }}>Delete {plant.name}?</h2>
+            <p style={{ textAlign: 'center', fontFamily: "'DM Sans', sans-serif", fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '20px' }}>
               This will permanently remove this plant and all its data.
             </p>
             <div style={{ display: 'flex', gap: '10px' }}>

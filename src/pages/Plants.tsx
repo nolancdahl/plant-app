@@ -8,7 +8,18 @@ export default function Plants() {
 
   return (
     <div className="page">
-      <AppHeader pageTitle="Plants" />
+      <AppHeader />
+
+      <div style={{ marginBottom: '20px' }}>
+        <h2 className="title-bold" style={{ fontSize: '34px', margin: 0, lineHeight: 1.0 }}>
+          Plants
+        </h2>
+        <div className="page-subtitle">
+          {plants.length === 0
+            ? 'Your collection is empty'
+            : `${plants.length} in your collection`}
+        </div>
+      </div>
 
       {plants.length === 0 ? (
         <div className="empty-state">
@@ -55,7 +66,11 @@ export default function Plants() {
       )}
 
       <button className="fab" onClick={() => navigate('/plants/new')} aria-label="Add plant">
-        +
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+          <line x1="12" y1="5" x2="12" y2="19" />
+          <line x1="5" y1="12" x2="19" y2="12" />
+        </svg>
+        Add Plant
       </button>
     </div>
   );
